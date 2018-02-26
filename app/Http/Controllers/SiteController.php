@@ -16,8 +16,9 @@ class SiteController extends Controller
      */
     public function index()
     {
-        return view('site.index');
+        return view('site.index', ['title' => 'TRY Nieruchomości']);
     }
 
-    // TODO clean that assets dit, get to know how to manage that with bower, elixir or something :)
+    // TODO clean that assets dir, get to know how to manage that with bower, elixir or something :)
+    // TODO check other index pages if there are nicer footers
 }

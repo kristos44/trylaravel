@@ -25,4 +25,10 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 Route::get('', 'SiteController@index')->name('index');
-Route::get('/home', 'SiteController@index')->name('index');
+Route::get('/home', 'SiteController@index')->name('indexHome');
+//Route::get('/oferta', 'EstateController@index')->name('index');
+
+Route::group(['prefix' => 'oferta'], function () {
+    Route::get('', 'EstateController@index')->name('indexEstate');
+    Route::get('szczegoly/{id}', 'EstateController@show')->name('showEstate');
+});

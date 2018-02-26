@@ -12,7 +12,12 @@ class CreateEstatesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('estates', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('description', 5000);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateEstatesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('estates');
     }
 }

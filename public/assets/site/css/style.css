@@ -26562,7 +26562,7 @@ img.mfp-img {
 
 @media (min-width: 1200px) {
   .header_minimal .rd-navbar-static .rd-navbar-top-panel, .header_minimal .rd-navbar-fullwidth .rd-navbar-top-panel {
-    width: 80%;
+    width: 70%;
     padding-bottom: 0;
   }
 }
