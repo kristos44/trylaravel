@@ -21,12 +21,12 @@ Route::group(['prefix' => 'admin'], function () {
 //        'as' => 'index', 'uses' => 'AdminController@index'
 //    ]);
     Route::get('', 'AdminController@index')->name('adminindex');
+
+    Route::resource('estate', 'AdminEstateController');
 });
 
 
 Route::get('', 'SiteController@index')->name('index');
-Route::get('/home', 'SiteController@index')->name('indexHome');
-//Route::get('/oferta', 'EstateController@index')->name('index');
 
 Route::group(['prefix' => 'oferta'], function () {
     Route::get('', 'EstateController@index')->name('indexEstate');
